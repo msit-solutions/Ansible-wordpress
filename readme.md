@@ -32,13 +32,15 @@ nano vars/default.yml
 ```yml
 ---
 #System Settings
+---
+#System Settings
 php_modules: [ 'php-curl', 'php-gd', 'php-mbstring', 'php-xml', 'php-xmlrpc', 'php-soap', 'php-intl', 'php-zip' ]
 
 #MySQL Settings
-mysql_root_password: "mysql_root_password"
+mysql_root_password: "123456"
 mysql_db: "wordpress"
-mysql_user: "sammy"
-mysql_password: "password"
+mysql_user: "ubuntu"
+mysql_password: "pass@word"
 
 #HTTP Settings
 http_host: "your_domain"
@@ -50,6 +52,7 @@ http_port: "80"
 
 ```command
 ansible-playbook -l [target] -i [inventory file] -u [remote user] playbook.yml
+ansible-playbook playbook.yml -l all -u ubuntu
 ```
 
 For more information on how to run this Ansible setup, please check this guide: [How to Use Ansible to Install and Set Up WordPress with LAMP on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-use-ansible-to-install-and-set-up-wordpress-with-lamp-on-ubuntu-18-04).
